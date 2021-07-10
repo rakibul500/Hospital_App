@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
     android:background="@drawable/main_background">
 
 
     <ImageView
         android:id="@+id/logo_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="253dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/logo_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="05dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="cursive"
         android:text="Good Health,Good Life"
         android:textAlignment="center"
         android:textColorHighlight="#000000"
         android:textColorLink="#0B0A0B"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image" />
-</android.support.constraint.ConstraintLayout>
+        android:textSize="35sp"
+        android:textStyle="bold" />
+</LinearLayout>
