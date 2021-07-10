@@ -34,7 +34,10 @@ public class Home extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for(DataSnapshot data:snapshot.getChildren())
-                            remote_images.add(new SlideModel(data.child("url").getValue().toString(),data.child("title").getValue().toString(), ScaleTypes.FIT));
+                            remote_images.add(new SlideModel(data.child("url").getValue().toString(), ScaleTypes.FIT));
+
+                        //data.child("title").getValue().toString(),
+                        // (IF need title with slider just put this line into before line after first comma)
 
                             main_slider.setImageList(remote_images,ScaleTypes.FIT);
 

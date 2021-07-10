@@ -43,5 +43,8 @@ dependencies {
     //for image slider
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
+    //for card view
+    implementation "androidx.cardview:cardview:1.0.0"
+
 
 }
