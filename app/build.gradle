@@ -45,6 +45,10 @@ dependencies {
 
     //for card view
     implementation "androidx.cardview:cardview:1.0.0"
+    //for recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+    implementation 'com.firebaseui:firebase-ui-database:7.2.0'
 
 
 }
