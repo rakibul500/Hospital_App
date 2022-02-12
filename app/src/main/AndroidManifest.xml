@@ -9,9 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hospital">
-        <activity android:name=".Hospital1"></activity>
-        <activity android:name=".Home"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".HospitalDetails"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorDetails"
+            android:exported="false" />
+        <activity
+            android:name=".Ambulance"
+            android:exported="false"
+            android:label="Search Here"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".Doctor"
+            android:exported="false"
+            android:label="Select Category"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".BloodBank"
+            android:exported="true" />
+        <activity
+            android:name=".Hospital1"
+            android:label="Search Here"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".Home" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +43,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 

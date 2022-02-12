@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Home extends AppCompatActivity implements View.OnClickListener{
 
@@ -60,7 +61,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for(DataSnapshot data:snapshot.getChildren())
-                            remote_images.add(new SlideModel(data.child("url").getValue().toString(), ScaleTypes.FIT));
+                            remote_images.add(new SlideModel(Objects.requireNonNull(data.child("url").getValue()).toString(), ScaleTypes.FIT));
 
                         //data.child("title").getValue().toString(),
                         // (IF need title with slider just put this line into before line after first comma)
@@ -79,14 +80,24 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         Intent i;
-        switch (v.getId()){
-
-            case R.id.buttonId1:
-                i=new Intent(this,Hospital1.class);
-                startActivity(i);
-                break;
-
-
+        if (v.getId() == R.id.buttonId1) {
+            i = new Intent(this, Hospital1.class);
+            startActivity(i);
         }
+        if (v.getId()==R.id.buttonId2){
+            i = new Intent(this, BloodBank.class);
+            startActivity(i);
+        }
+
+        if (v.getId()==R.id.buttonId3){
+            i = new Intent(this, Doctor.class);
+            startActivity(i);
+        }
+
+        if (v.getId()==R.id.buttonId4){
+            i = new Intent(this, Ambulance.class);
+            startActivity(i);
+        }
+
     }
 }

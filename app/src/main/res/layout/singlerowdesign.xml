@@ -13,30 +13,68 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_marginTop="12sp"
+            android:id="@+id/hos_pic"
+            android:layout_width="100sp"
+            android:layout_height="80sp"
+            android:src="@drawable/doctor2">
+
+        </ImageView>
 
         <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/name_text"
-            android:text="This is Demo Name"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"/>
-
-        <TextView
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/hos_pic"
+            android:text="This is Demo Name"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_text"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/hos_pic"
             android:text="This is Address"
+            android:textColor="#000"
             android:textSize="20sp"
             android:textStyle="italic"
+            android:layout_marginTop="3sp"/>
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address_text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7sp"
+
+            android:layout_toRightOf="@+id/hos_pic"
+            android:text="This is Phone"
             android:textColor="#000"
-            android:layout_below="@id/name_text"
-            android:layout_marginLeft="10dp"/>
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/call_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@+id/address_text"
+            android:layout_alignRight="@+id/address_text"
+            android:text="Call"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+
+
 
     </RelativeLayout>
 

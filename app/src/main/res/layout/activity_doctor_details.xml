@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetails"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/doctor_image"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/doctor">
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Doctor Name"
+            android:textSize="30sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/doctor_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Doctor Degree"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/doctor_speciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Doctor Speciality"
+            android:textSize="20sp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Visiting Chember-1"
+            android:textSize="20dp"
+            android:textColor="#F4073E"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/visiting_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Address-1"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/visiting_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Visiting Time-1"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/visiting_phone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Phone-1"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/visiting_call1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call For Appointment"
+            android:drawableLeft="@drawable/call_icon"
+            android:drawablePadding="10sp"
+            android:textSize="20dp"
+            android:textAllCaps="false">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Visiting Chember-2"
+            android:textSize="20dp"
+            android:textColor="#F4073E"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/visiting_address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Address-2"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/visiting_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Visiting Time-2"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/visiting_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This Is Phone-2"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/visiting_call2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call For Appointment"
+            android:drawableLeft="@drawable/call_icon"
+            android:drawablePadding="10sp"
+            android:textSize="20dp"
+            android:textAllCaps="false">
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
