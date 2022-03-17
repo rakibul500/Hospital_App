@@ -165,6 +165,41 @@
         </Button>
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bangladesh1"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp">
+
+        <TextView
+            android:id="@+id/map_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dp"
+            android:background="#ffff"
+            android:text="This is Address Line In Details"
+            android:textColor="#0B0B0B"
+            android:textSize="25dp"
+            android:textStyle="italic">
+
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="120sp"
+            android:layout_height="60dp"
+            android:layout_marginTop="160dp"
+            android:src="@drawable/google_icon">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+
 
 
 

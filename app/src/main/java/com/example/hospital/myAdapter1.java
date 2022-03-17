@@ -46,20 +46,19 @@ public class myAdapter1 extends FirebaseRecyclerAdapter<model1,myAdapter1.myview
                 intent.putExtra("H_phone",""+model1.getH_phone());
                 intent.putExtra("H_ambulance",""+model1.getH_ambulance());
                 intent.putExtra("H_pic",model1.getPic_url());
+                intent.putExtra("Longitude",model1.getLongi());
+                intent.putExtra("Latitude",model1.getLati());
 
                 intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
                 holder.name_text.getContext().startActivity(intent);
             }
         });
 
-        holder.call_button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                String phonee = "tel:"+String.valueOf(model1.getH_phone());
-                intent.setData(Uri.parse(phonee));
-                context.startActivity(intent);
-            }
+        holder.call_button1.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            String phonee = "tel:"+String.valueOf(model1.getH_phone());
+            intent.setData(Uri.parse(phonee));
+            context.startActivity(intent);
         });
         
 
@@ -75,7 +74,7 @@ public class myAdapter1 extends FirebaseRecyclerAdapter<model1,myAdapter1.myview
         return new myviewholder1(view);
     }
 
-    public class myviewholder1 extends RecyclerView.ViewHolder {
+    public static class myviewholder1 extends RecyclerView.ViewHolder {
 
         TextView name_text,address_text,phone_text;
         ImageView hos_pic;

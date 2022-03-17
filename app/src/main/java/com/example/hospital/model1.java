@@ -3,6 +3,28 @@ package com.example.hospital;
 public class model1 {
     String h_name,h_location,pic_url;
     int h_phone,h_ambulance;
+    double longi,lati;
+
+    public model1(double longi, double lati) {
+        this.longi = longi;
+        this.lati = lati;
+    }
+
+    public double getLongi() {
+        return longi;
+    }
+
+    public void setLongi(double longi) {
+        this.longi = longi;
+    }
+
+    public double getLati() {
+        return lati;
+    }
+
+    public void setLati(double lati) {
+        this.lati = lati;
+    }
 
     model1(){
 
