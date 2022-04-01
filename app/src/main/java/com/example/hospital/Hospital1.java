@@ -76,9 +76,6 @@ public class Hospital1 extends AppCompatActivity {
     private void processSearch(String s)
 
     {
-
-
-
         FirebaseRecyclerOptions<model1> options =
                 new FirebaseRecyclerOptions.Builder<model1>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Hospital_list").orderByChild("h_name").startAt(s).endAt(s+"\uf8ff"), model1.class)

@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -41,11 +42,19 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         button6=findViewById(R.id.buttonId6);
 
         button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
         button3.setOnClickListener(this);
         button4.setOnClickListener(this);
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             Intent intent=new Intent(Home.this,BloodBank.class);
+             startActivity(intent);
+
+            }
+        });
 
         //slider Hooks
         main_slider=findViewById(R.id.image_slider);
@@ -85,7 +94,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
             startActivity(i);
         }
         if (v.getId()==R.id.buttonId2){
-            i = new Intent(this, BloodBank.class);
+            i = new Intent(this, SignUp.class);
             startActivity(i);
         }
 
@@ -99,5 +108,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
             startActivity(i);
         }
 
+
+
+
     }
+
+
 }

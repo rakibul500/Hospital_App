@@ -20,12 +20,9 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 public class myAdapter1 extends FirebaseRecyclerAdapter<model1,myAdapter1.myviewholder1> {
     private Context context;
 
-
-
     public myAdapter1(@NonNull FirebaseRecyclerOptions<model1> options, Context context) {
         super(options);
         this.context = context;
-
     }
 
     @Override
