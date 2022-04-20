@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.se.omapi.Session;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,7 +38,7 @@ public class SignIn extends AppCompatActivity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String _phone = number.getText().toString().trim();
+                final String _phone = "+88"+number.getText().toString().trim();
                 final String _password = password.getText().toString().trim();
 
                 if (_phone.isEmpty()) {
@@ -67,13 +69,18 @@ public class SignIn extends AppCompatActivity {
                                 password.setError(null);
                                 password.setEnabled(true);
 
-                                //String phoneFromDB = snapshot.child(phone).child("phoneNo").getValue(String.class);
-                                //String nameFromDB = snapshot.child(phone).child("name").getValue(String.class);
-                                //String genderFromDB = snapshot.child(phone).child("gender").getValue(String.class);
-                                //String bloodGroupFromDB = snapshot.child(phone).child("bloodGroup").getValue(String.class);
+                                //Get User Data From Firebase Database
+                                //String nameFromDB = snapshot.child(_phone).child("name").getValue(String.class);
+                                //String bloodGroupFromDB = snapshot.child(_phone).child("bloodGroup").getValue(String.class);
+                                //String phoneFromDB = snapshot.child(_phone).child("phone").getValue(String.class);
+                                //String districtFromDB = snapshot.child(_phone).child("district").getValue(String.class);
+                                //String upozilaFromDB = snapshot.child(_phone).child("upozila").getValue(String.class);
 
-                                Intent intent = new Intent(getApplicationContext(),BloodBank.class);
-                                startActivity(intent);
+                                SharedPreferences.Editor editor = getSharedPreferences("name", MODE_PRIVATE).edit();
+                                editor.putString("phone", _phone);
+                                editor.putBoolean("isLoggedIn", true);
+                                editor.apply();
+                                startActivity(new Intent(getApplicationContext(),BloodBankMain.class));
                             } else {
                                 password.setError("Wrong Password Or User Name");
                                 password.requestFocus();

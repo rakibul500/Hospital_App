@@ -1,13 +1,13 @@
 package com.example.hospital;
 
 public class UserHelper {
-    String name,phone,password,gender,division,district,upozila;
+    String name,phone,password,gender,division,district,upozila,bloodGroup;
 
     public UserHelper(){
 
     }
 
-    public UserHelper(String name, String phone, String password, String gender, String division, String district, String upozila) {
+    public UserHelper(String name, String phone, String password, String gender, String division, String district, String upozila,String bloodGroup) {
         this.name = name;
         this.phone = phone;
         this.password = password;
@@ -15,6 +15,15 @@ public class UserHelper {
         this.division = division;
         this.district = district;
         this.upozila = upozila;
+        this.bloodGroup=bloodGroup;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
     }
 
     public String getName() {

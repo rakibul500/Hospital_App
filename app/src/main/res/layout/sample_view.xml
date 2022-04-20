@@ -10,7 +10,7 @@
         android:id="@+id/spinner1_view"
         android:textSize="22sp"
         android:padding="10sp"
-        android:textColor="#C50707"
+        android:textColor="#CCC8C8"
         android:textColorHint="#7A7A67"
         android:hint="Select Blood Group"/>
 

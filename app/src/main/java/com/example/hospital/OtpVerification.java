@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 
 public class OtpVerification extends AppCompatActivity {
 
-    String name,phone,password,gender,division,district,upozila;
+    String name,phone,password,gender,division,district,upozila,bloodGroup;
 
     String codeBySystem;
     EditText otpField;
@@ -49,6 +49,7 @@ public class OtpVerification extends AppCompatActivity {
         division=getIntent().getStringExtra("getDivision");
         district=getIntent().getStringExtra("getDistrict");
         upozila=getIntent().getStringExtra("getUpozila");
+        bloodGroup=getIntent().getStringExtra("getBlood");
 
 
         sentVerificationCodeToUser(phone);
@@ -58,7 +59,7 @@ public class OtpVerification extends AppCompatActivity {
         FirebaseAuth mAuth=FirebaseAuth.getInstance();
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+88" + phone)       // Phone number to verify
+                        .setPhoneNumber(phone)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
@@ -119,7 +120,7 @@ public class OtpVerification extends AppCompatActivity {
         FirebaseDatabase rootNode=FirebaseDatabase.getInstance();
         DatabaseReference reference=rootNode.getReference("BloodBank_users");
 
-        UserHelper addNewUser= new UserHelper(name,phone,password,gender,division,district,upozila);
+        UserHelper addNewUser= new UserHelper(name,phone,password,gender,division,district,upozila,bloodGroup);
         reference.child(phone).setValue(addNewUser);
 
         Toast.makeText(OtpVerification.this,"Registration Successful",Toast.LENGTH_LONG).show();

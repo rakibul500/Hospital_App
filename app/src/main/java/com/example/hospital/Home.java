@@ -107,7 +107,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
             i = new Intent(this, Ambulance.class);
             startActivity(i);
         }
-
+        if (v.getId()==R.id.buttonId5){
+            i = new Intent(this, SignIn.class);
+            startActivity(i);
+        }
 
 
 

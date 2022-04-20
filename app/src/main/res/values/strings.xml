@@ -27,6 +27,14 @@
 
     <string name="menu_slideshow">Slideshow</string>
 
+
+    <string-array name="doctor_category">
+        <item>All</item>
+        <item>Medicine</item>
+        <item>Psychology</item>
+        <item>Orthopedic</item>
+    </string-array>
+
     <string-array name="blood_group">
         <item>Select Blood Group</item>
         <item>A Positive(A+)</item>

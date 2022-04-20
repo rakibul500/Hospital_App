@@ -26,9 +26,9 @@ public class Ambulance extends AppCompatActivity {
         recyclerView3=findViewById(R.id.recylerView3);
         recyclerView3.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<model3> options =
-                new FirebaseRecyclerOptions.Builder<model3>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Ambulance_list"), model3.class)
+        FirebaseRecyclerOptions<model1> options =
+                new FirebaseRecyclerOptions.Builder<model1>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Hospital_list"), model1.class)
                         .build();
 
         adapter3=new myAdapter3(options,Ambulance.this);
@@ -79,9 +79,9 @@ public class Ambulance extends AppCompatActivity {
 
 
 
-        FirebaseRecyclerOptions<model3> options =
-                new FirebaseRecyclerOptions.Builder<model3>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Ambulance_list").orderByChild("h_name").startAt(s).endAt(s+"\uf8ff"), model3.class)
+        FirebaseRecyclerOptions<model1> options =
+                new FirebaseRecyclerOptions.Builder<model1>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Hospital_list").orderByChild("h_name").startAt(s).endAt(s+"\uf8ff"), model1.class)
                         .build();
 
         adapter3= new myAdapter3(options, Ambulance.this);

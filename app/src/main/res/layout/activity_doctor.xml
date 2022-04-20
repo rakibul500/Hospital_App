@@ -8,6 +8,32 @@
     android:orientation="vertical"
     android:background="@drawable/main_background">
 
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#F2FAFA"
+            android:layout_marginTop="10dp"
+            android:text="Select Category:">
+        </TextView>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvId"
+            android:layout_marginLeft="10dp">
+
+        </Spinner>
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerView2"
         android:layout_width="match_parent"

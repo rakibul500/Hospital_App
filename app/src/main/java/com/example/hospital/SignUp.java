@@ -306,7 +306,7 @@ public class SignUp extends AppCompatActivity {
 
                 Intent intent=new Intent(SignUp.this,OtpVerification.class);
                 intent.putExtra("getName",name);
-                intent.putExtra("getPhone",phone);
+                intent.putExtra("getPhone","+88"+phone);
                 intent.putExtra("getPassword",password);
                 intent.putExtra("getGender",genderId);
                 intent.putExtra("getBlood",bloodSpinner);
